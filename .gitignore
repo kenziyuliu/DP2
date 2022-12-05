@@ -1,0 +1,8 @@
+logs/
+data/imdb
+data/so_tag
+__pycache__/
+stash/
+figures/
+temp/
+.DS_Store
