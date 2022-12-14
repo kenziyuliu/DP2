@@ -2,7 +2,7 @@
 
 Official JAX/Haiku implementation of the paper "Differentially Private Adaptive Optimization with Delayed Preconditioners".
 
-[[arXiv](https://arxiv.org/abs/2212.00309)][[PDF](https://arxiv.org/pdf/2212.00309)]
+[[PDF](https://arxiv.org/pdf/2212.00309)][[arXiv](https://arxiv.org/abs/2212.00309)]
 
 ## Dependencies
 

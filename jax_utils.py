@@ -14,7 +14,8 @@ import numpy as np
 
 def global_l2_clip(tensor_struct, clip: float):
   t_list, tree_def = tree_flatten(tensor_struct)
-  global_norm = jnp.linalg.norm([jnp.linalg.norm(t.reshape(-1), ord=2) for t in t_list])
+  tensor_norms = jnp.asarray([jnp.linalg.norm(t.reshape(-1), ord=2) for t in t_list])
+  global_norm = jnp.linalg.norm(tensor_norms)
   norm_factor = jnp.minimum(clip / (global_norm + 1e-15), 1.0)
   clipped_t_list = [t * norm_factor for t in t_list]
   return tree_unflatten(tree_def, clipped_t_list)
